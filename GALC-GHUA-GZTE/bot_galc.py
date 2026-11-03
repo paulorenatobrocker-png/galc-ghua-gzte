@@ -21,7 +21,7 @@ def calc_galc(slot, port):
     pon = (slot * 16 + port - 16)
     slot_icx = math.ceil(pon / 24)
     port_icx = pon - ((slot_icx - 1) * 24)
-    return pon, slot_icx, port_icx
+    return slot_icx, port_icx
 
 def calc_fibra(fibra):
     slot = math.ceil(fibra / 24)
