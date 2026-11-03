@@ -123,7 +123,7 @@ async def receber_port(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text(f"✅ GZTE {slot}/{port}\n➡ ICX: SLOT {icx_slot} PORTA {icx_port}", reply_markup=markup_equip)
         else:
             pon, slot_icx, port_icx = calc_galc(slot, port)
-            await update.message.reply_text(f"✅ {equip} {slot}/{port}\n➡ ICX: SLOT {slot_icx} PORT {port_icx}\nPON: {pon}", reply_markup=markup_equip)
+            await update.message.reply_text(f"✅ {equip} {slot}/{port}\n➡ ICX: SLOT {slot_icx} PORT {port_icx}", reply_markup=markup_equip)
         await update.message.reply_text("Qual próximo equipamento?", reply_markup=markup_equip)
         return EQUIP
     elif modo == 'icx_equip':
